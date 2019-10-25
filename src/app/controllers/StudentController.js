@@ -69,19 +69,27 @@ export default {
   },
 
   async show(req, res) {
-    const user = await Student.findByPk(req.params.id);
-    if (!user) {
+    const student = await Student.findByPk(req.params.id);
+    if (!student) {
       return res.status(400).json({ error: 'User not found' });
     }
-    return res.json(user);
+    return res.json(student);
   },
 
   // Faltando criar o metodo de delete
   async delete(req, res) {
-    const user = await Student.findByPk(req.params.id);
+    const student = await Student.findByPk(req.params.id);
 
-    if (!user) {
+    if (!student) {
       return res.status(400).json({ error: 'User not found' });
     }
+
+    await Student.destroy({ where: { id: req.params.id } });
+
+    return res.json({ ok: 'Student deleted with Sucess' });
+  },
+  async index(req, res) {
+    const students = await Student.findAll({ where: {} });
+    return res.json(students);
   },
 };
