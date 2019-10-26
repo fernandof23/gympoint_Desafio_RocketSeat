@@ -8,13 +8,13 @@ module.exports = {
         primaryKey: true,
       },
       student_id: {
-        type: Sequelize.DATE,
+        type: Sequelize.INTEGER,
         references: { model: 'students', key: 'id' },
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE',
       },
       plan_id: {
-        type: Sequelize.DATE,
+        type: Sequelize.INTEGER,
         references: { model: 'plans', key: 'id' },
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE',
@@ -28,7 +28,7 @@ module.exports = {
         allowNull: false,
       },
       price: {
-        type: Sequelize.DATE,
+        type: Sequelize.FLOAT,
         allowNull: false,
       },
       created_at: {

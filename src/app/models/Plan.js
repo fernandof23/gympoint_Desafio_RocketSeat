@@ -10,6 +10,7 @@ class Plans extends Model {
       },
       { sequelize }
     );
+    return this;
   }
 }
 

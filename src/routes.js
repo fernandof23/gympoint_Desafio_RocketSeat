@@ -4,6 +4,7 @@ import SessionController from './app/controllers/SessionController';
 import authController from './app/middlewares/auth';
 import StudentController from './app/controllers/StudentController';
 import PlansController from './app/controllers/PlansController';
+import RegistrationController from './app/controllers/RegistrationController';
 
 const routes = new Router();
 
@@ -26,5 +27,10 @@ routes.post('/plans', PlansController.store);
 routes.get('/plans', PlansController.index);
 routes.put('/plans/:plan_id', PlansController.update);
 routes.delete('/plans/:plan_id', PlansController.delete);
+
+// Matricula
+routes.post('/registration', RegistrationController.store);
+routes.get('/registration', RegistrationController.index);
+routes.put('/registration/:registration_id', RegistrationController.update);
 
 export default routes;

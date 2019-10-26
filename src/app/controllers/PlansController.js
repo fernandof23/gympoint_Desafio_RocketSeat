@@ -1,5 +1,5 @@
 import * as Yup from 'yup';
-import Plans from '../models/Plans';
+import Plans from '../models/Plan';
 
 export default {
   async store(req, res) {
