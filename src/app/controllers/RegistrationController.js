@@ -132,4 +132,13 @@ export default {
       price,
     });
   },
+  async delete(req, res) {
+    const register = await Registration.findByPk(req.params.registration_id);
+    if (!register) {
+      return res.status(400).json({ error: 'Register not Found' });
+    }
+
+    await Registration.destroy({ where: { id: req.params.registration_id } });
+    return res.json({ ok: 'Register deletes with sucess' });
+  },
 };
