@@ -3,6 +3,8 @@ import { parseISO, addMonths } from 'date-fns';
 import Registration from '../models/Registration';
 import Plan from '../models/Plan';
 import Student from '../models/Student';
+import Queue from '../../lib/queue';
+import RegistrationMail from '../jobs/RegistrationMail';
 
 export default {
   async store(req, res) {
@@ -45,6 +47,14 @@ export default {
       start_date,
       end_date,
       price,
+    });
+
+    await Queue.add(RegistrationMail.key, {
+      existStudent,
+      existPlan,
+      price,
+      start_date,
+      end_date,
     });
 
     return res.json({ id, student_id, plan_id, start_date, end_date, price });
