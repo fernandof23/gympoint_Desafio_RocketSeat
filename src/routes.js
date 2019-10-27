@@ -5,12 +5,18 @@ import authController from './app/middlewares/auth';
 import StudentController from './app/controllers/StudentController';
 import PlansController from './app/controllers/PlansController';
 import RegistrationController from './app/controllers/RegistrationController';
+import CheckinController from './app/controllers/CheckinController';
 
 const routes = new Router();
 
 routes.post('/users', UserController.store);
 routes.post('/session', SessionController.store);
 
+// Checkins
+routes.post('/students/:student_id/checkins', CheckinController.store);
+routes.get('/students/:student_id/checkins', CheckinController.index);
+
+// Rotas com controle de authenticação
 routes.use(authController);
 
 routes.put('/users', UserController.update);
