@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="Gympoint" title="Gympoint" src=".github/logo.png" width="200px" />
+  <img alt="Gympoint" title="Gympoint" src="https://raw.githubusercontent.com/Rocketseat/bootcamp-gostack-desafio-03/master/.github/logo.png" width="200px" />
 </h1>
 
 <h3 align="center">
@@ -8,20 +8,20 @@
 
 
 
-# GoBarber
-> App para controle de Barbearia, controle dos prestadores de serviço, dos clientes, e dos agendamentos.
+## :rocket: Gym Point
+> App para controle de academia, agendamento de alunos, dos administradores, planos, controle de frequencia.
 
 
 
-### App de Barbearia com controle total sobre:
+### App de Academia com controle total sobre:
 
-- Controle e cadastro dos Barbeiros/Providers.
-- Cadastro dos Clientes.
-- Solicitação de agendamento de Horario pelo cliente, para um barbeiro escolhido.
-- Notificação para o barbeiro dos agendamentos feitos no dia, ou na data escolhida.
-- Cancelamento do agendamento com ate 2 horas de antecedência.
-- Envio de e-mail para o barbeiro em caso de cancelamento de agendamento.
-
+- Controle e cadastro dos Clientes/Administrador.
+- Cadastro dos usuarios.
+- Criação de planos personalizados, com tempo e valor.
+- Matricula do aluno cadastrado, com algum plano, criando um controle automatico de tempo restante do aluno, e se esta ativo ou não.
+- Listagem de todos os alunos, e alunos matriculados na academia.
+- Envio de e-mail para o aluno quando ele for matriculado, passando as informações do plano matriculado.
+- Opção do cliente enviar suas duvidas, e receber as respostas do Instrutor da academia direto por sua pagina, e sempre que </br> que receber uma resposta, recebera um e-mail com a pergunta, e a resposta que obteve.
 
 ## API desenvolvida com as tecnologias:
 
