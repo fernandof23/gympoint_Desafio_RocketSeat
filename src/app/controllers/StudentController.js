@@ -76,7 +76,6 @@ export default {
     return res.json(student);
   },
 
-  // Faltando criar o metodo de delete
   async delete(req, res) {
     const student = await Student.findByPk(req.params.id);
 
@@ -89,7 +88,12 @@ export default {
     return res.json({ ok: 'Student deleted with Sucess' });
   },
   async index(req, res) {
-    const students = await Student.findAll({ where: {} });
+    const { page = 1 } = req.query;
+    const students = await Student.findAll({
+      where: {},
+      limit: 20,
+      offset: (page - 1) * 20,
+    });
     return res.json(students);
   },
 };
