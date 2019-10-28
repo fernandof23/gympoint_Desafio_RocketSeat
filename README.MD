@@ -21,7 +21,7 @@
 - Matricula do aluno cadastrado, com algum plano, criando um controle automatico de tempo restante do aluno, e se esta ativo ou não.
 - Listagem de todos os alunos, e alunos matriculados na academia.
 - Envio de e-mail para o aluno quando ele for matriculado, passando as informações do plano matriculado.
-- Opção do cliente enviar suas duvidas, e receber as respostas do Instrutor da academia direto por sua pagina, e sempre que </br> que receber uma resposta, recebera um e-mail com a pergunta, e a resposta que obteve.
+- Opção do cliente enviar suas duvidas, e receber as respostas do Instrutor da academia direto por sua pagina, e sempre que receber uma resposta, recebera um e-mail com a pergunta, e a resposta que obteve.
 
 ## API desenvolvida com as tecnologias:
 
